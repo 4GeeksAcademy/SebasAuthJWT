@@ -1,26 +1,57 @@
-import React, { useContext } from "react";
-import { Context } from "../store/appContext";
-import rigoImageUrl from "../../img/rigo-baby.jpg";
-import "../../styles/home.css";
+import { useState } from 'react'
+import '../App.css'
+import Logo from "../assets/icoLogin.svg"
+import {Link} from "react-router-dom";
 
-export const Home = () => {
-	const { store, actions } = useContext(Context);
+const generateParticles = (numParticles) => {
+  const particles = [];
+  for (let i = 0; i < numParticles; i++) {
+    particles.push({
+      top: `${Math.random() * 100}vh`,
+      left: `${Math.random() * 100}vw`,
+    });
+  }
+  return particles;
+}
 
-	return (
-		<div className="text-center mt-5">
-			<h1>Hello Rigo!!</h1>
-			<p>
-				<img src={rigoImageUrl} />
-			</p>
-			<div className="alert alert-info">
-				{store.message || "Loading message from the backend (make sure your python backend is running)..."}
-			</div>
-			<p>
-				This boilerplate comes with lots of documentation:{" "}
-				<a href="https://start.4geeksacademy.com/starters/react-flask">
-					Read documentation
-				</a>
-			</p>
-		</div>
-	);
-};
+const Home = () => {
+  const particles = generateParticles(800); //ajuste numero de particulas
+
+  return (
+    <div className="container">
+      {particles.map((particle, index) => (
+        <div 
+          key={index} 
+          className="particles" 
+          style={{ top: particle.top, left: particle.left, right: particle.right }}
+        ></div>
+      ))}
+      <h3>Welcome to Login Form</h3>
+
+      <img src={Logo} alt="imgLogo" />
+
+      <Link to="/Register">
+        <button className='btnRegister'>Sign Up</button>
+      </Link>
+        
+      
+
+      <div className="separator-with-text">
+        <span>OR</span>
+      </div>
+
+      <div className='form'>
+
+        <input type="email" placeholder='Email' required/>
+
+        <input type="password" placeholder='Password' required/>
+
+        <button>Login</button>
+
+      </div>
+    </div>
+  );
+
+}
+
+export default Home
