@@ -1,7 +1,7 @@
 import React from "react"
-import '../App.css'
-import LogoRegister from "../assets/icoRegister.svg"
-import {Link} from "react-router-dom";
+import '../../styles/home.css'
+import LogoRegister from "../../img/icoRegister.svg"
+import { Link } from "react-router-dom";
 
 
 const generateParticles = (numParticles) => {
@@ -15,7 +15,7 @@ const generateParticles = (numParticles) => {
     return particles;
   }
 
-const Register = () =>{
+export const Register = () =>{
     const particles = generateParticles(800);
     
 
@@ -57,4 +57,3 @@ const Register = () =>{
 
 }
 
-export default Register

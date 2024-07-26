@@ -1,6 +1,8 @@
 import { useState } from 'react'
-import '../App.css'
-import Logo from "../assets/icoLogin.svg"
+
+import viteLogo from '/vite.svg'
+import '../../styles/home.css'
+import Logo from "../../img/icoLogin.svg"
 import {Link} from "react-router-dom";
 
 const generateParticles = (numParticles) => {
@@ -14,7 +16,7 @@ const generateParticles = (numParticles) => {
   return particles;
 }
 
-const Home = () => {
+export const Home = () => {
   const particles = generateParticles(800); //ajuste numero de particulas
 
   return (
@@ -54,4 +56,3 @@ const Home = () => {
 
 }
 
-export default Home

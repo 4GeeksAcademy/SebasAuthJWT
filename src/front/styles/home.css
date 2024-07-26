@@ -5,3 +5,119 @@
     one more css for each page that will contain the selected used 
     on that page only (the ones not reused in other pages).
 */
+
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+  }
+  
+  body {
+    background-color: #000;
+    background-image: radial-gradient(circle, rgba(255, 255, 255, 0.192), rgba(0, 0, 0, 0));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  img{
+    width: 100px;
+    margin-bottom: 25px;
+  }
+  .container {
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .separator-with-text {
+    width: 70%; /* Ajusta el ancho del separador */
+    text-align: center;
+    border: none;
+    line-height: 0;
+    margin: 20px 0;
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+  }
+  
+  .separator-with-text::before, .separator-with-text::after {
+    content: "";
+    flex: 1;
+    border-bottom: 1px solid #aaa; /* Color y grosor de la línea */
+  }
+  
+  .separator-with-text::before {
+    margin-right: 10px;
+  }
+  
+  .separator-with-text::after {
+    margin-left: 10px;
+  }
+  
+  .separator-with-text span {
+    display: inline-block;
+    padding: 0 10px;
+    color: #aaa; /* Color del texto */
+    background: #000; /* Fondo para que no se vea la línea debajo */
+    font-size: 12px; /* Ajusta el tamaño del texto si es necesario */
+  }
+  
+  .particles {
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    background-color: white;
+    border-radius: 80%;
+    opacity: 0.3;
+    animation: float 10s infinite;
+  }
+  
+  h3{
+    font-weight: 400;
+    font-size: 45px;
+  }
+  
+  .form{
+    display: grid; 
+    justify-content: center;
+    align-items: center;
+  }
+  
+  input{
+    width: 300px;
+    height: 40px;
+    padding-left: 15px;
+    font-family: system-ui;
+    margin-top: 15px;
+    border-radius: 10px;
+    border: none;
+    background-color: rgba(255, 255, 255, 0.137);
+    color: white;
+  }
+  
+  button{
+    background-color: white;
+    margin-top: 25px;
+    width: 317px;
+  }
+  
+  .btnRegister{
+    background-color: rgba(255, 255, 255, 0.137);
+    color: white;
+    width: 317px;
+    margin-bottom: 45px;
+  }
+  
+  @keyframes float {
+    0% { transform: translateY(0); opacity: 0.2; }
+    50% { transform: translateY(-20px); opacity: 0.4; }
+    100% { transform: translateY(0); opacity: 0.2; }
+  }
