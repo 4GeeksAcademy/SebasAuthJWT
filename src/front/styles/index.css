@@ -37,7 +37,18 @@
     font-size: 3.2em;
     line-height: 1.1;
   }
+
+  h3{
+    color: white;
+    margin-top: 5rem;
+  }
   
+.Logo{
+  color: white;
+  height: 100px;
+  width: 100px;
+}
+
   button {
     border-radius: 8px;
     border: 1px solid transparent;
